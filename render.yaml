@@ -1,23 +1,27 @@
 services:
   - type: web
-    name: oxygen-sports-backend
-    env: node
-    region: ohio
-    rootDir: backend
-    buildCommand: npm install && npx prisma generate
-    startCommand: npm start
-    envVars:
-      - key: PORT
-        value: 5000
-      - key: NODE_ENV
-        value: production
-      - key: DATABASE_URL
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
-      - key: JWT_SECRET
-        sync: false
-      - key: JWT_REFRESH_SECRET
-        sync: false
-      - key: FIREBASE_SERVICE_ACCOUNT_KEY
-        sync: false
+      name: oxygen-sports-backend
+          env: node
+              region: ohio
+                  rootDir: backend
+                      buildCommand: npm install && npx prisma generate
+                          startCommand: npm start
+                              envVars:
+                                    - key: PORT
+                                            value: 5000
+                                                  - key: NODE_ENV
+                                                          value: production
+                                                                - key: DATABASE_URL
+                                                                        sync: false
+                                                                              - key: JWT_SECRET
+                                                                                      sync: false
+                                                                                            - key: ADMIN_PIN
+                                                                                                    value: 1526
+                                                                                                          - key: FIREBASE_API_KEY
+                                                                                                                  value: AIzaSyBBu09sNsMOpBAjacrbyTjZsMbgpC8pcZI
+                                                                                                                        - key: FIREBASE_SERVICE_ACCOUNT_KEY
+                                                                                                                                sync: false
+                                                                                                                                      - key: OPENAI_API_KEY
+                                                                                                                                              sync: false
+                                                                                                                                                    - key: AI_TIMEOUT_MS
+                                                                                                                                                            value: 30000
